@@ -1,0 +1,5 @@
+*.out
+*.gz
+*.cls
+*.fls
+*.aux
