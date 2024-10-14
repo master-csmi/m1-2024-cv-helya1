@@ -28,7 +28,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install pip
-        run: apt update && apt install -y python3-pip
+        run: sudo apt update && sudo apt install -y python3-pip
 
       # Runs a single command using the runners shell
       - name: compile latex CV
