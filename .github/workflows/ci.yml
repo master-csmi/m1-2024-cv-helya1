@@ -16,7 +16,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    if: 0
+    if: 1
     name: Build
     # The type of runner that the job will run on
     runs-on: self-texlive
@@ -41,3 +41,15 @@ jobs:
         run: dpkg -l g++
       - name: check libeigen3-dev version
         run: dpkg -l libeigen3-dev
+      - name: create build
+        run: mkdir build
+      - name: cmake configure
+        run: cmake ..
+        working-directory: build
+      - name: build
+        run: make
+        working-directory: build
+      - name: run
+        run: ./eig
+        working-directory: build
+

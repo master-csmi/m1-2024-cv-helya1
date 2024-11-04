@@ -10,3 +10,4 @@
 *.out
 main.pdf
 *.synctex.gz
+build/
