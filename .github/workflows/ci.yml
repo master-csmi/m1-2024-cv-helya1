@@ -29,3 +29,15 @@ jobs:
       # Runs a single command using the runners shell
       - name: compile latex CV
         run: pdflatex main.tex
+
+  cpp:
+    name: C++ Build
+    runs-on: self-texlive
+    steps:
+      - uses: actions/checkout@v4
+      - name: check cmake version
+        run: dpkg -l cmake
+      - name: check g++ version
+        run: dpkg -l g++
+      - name: check libeigen-dev version
+        run: dpkg -l libeigen-dev
