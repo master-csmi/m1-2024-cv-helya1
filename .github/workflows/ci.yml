@@ -38,5 +38,5 @@ jobs:
         run: dpkg -l cmake
       - name: check g++ version
         run: dpkg -l g++
-      - name: check libeigen-dev version
-        run: dpkg -l libeigen-dev
+      - name: check libeigen3-dev version
+        run: dpkg -l libeigen3-dev
